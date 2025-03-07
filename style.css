@@ -212,6 +212,9 @@ main>section {
 main>section:nth-child(odd) {
     background-color: #F8FFFC;
 }
+main>section:nth-child(even) {
+    background-color: whitesmoke;
+}
 main>section {
     display: flex;
     justify-content: center;
@@ -241,7 +244,11 @@ section#home .home-img {
 
 section#home .container img {
     width: 50%;
-    border: 1px solid #333;
+    perspective: 1000px;
+    transform: rotateY(-10deg);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+        -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section#home .home-content {
@@ -299,6 +306,11 @@ section#features .container .features-img {
 }
 section#features .container img {
     width: 60%;
+    perspective: 1000px;
+    transform: rotateY(-10deg);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+        -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .features-content .card-cont {
@@ -345,10 +357,12 @@ section#author .container {
 
 .container .author-img img {
     width: 50%;
-    border-radius: 15px;
-    border: 1px solid #333;
+    border-radius: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
+    transition: filter 0.3s ease;
 }
+
 .container .author-content p {
     text-align: justify;
 }
@@ -377,6 +391,13 @@ section#testimonial .card-box {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+.card-box .card1 p blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 3px solid #007bff;
+}
+
 @media (max-width: 768px) {
     section#testimonial .card-box {
         grid-template-columns: 1fr;
@@ -396,7 +417,13 @@ section#cta .container {
     justify-content: center;
 }
 .cta-img img {
-    width: 40%;
+    width: 50%;
+    border-radius: 5px;
+    perspective: 1000px;
+    transform: rotateY(-10deg);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+        -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .cta-content {
@@ -436,10 +463,10 @@ section#cta .container {
 }
 
 section#contact .container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -448,11 +475,14 @@ section#contact .container p {
 }
 
 form {
-    max-width: 1000px;
+    width: 60%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #F8FFFC;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+        -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form div {
@@ -475,7 +505,7 @@ textarea {
 }
 
 textarea {
-    resize: vertical; /* Memungkinkan textarea diubah ukurannya secara vertikal */
+    resize: none;
 }
 
 button[type="submit"] {
@@ -488,7 +518,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #01baae;
 }
 
 @media (max-width: 768px) {
