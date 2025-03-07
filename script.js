@@ -34,4 +34,13 @@ function setActiveNav() {
 }
 
 window.addEventListener('scroll', setActiveNav);
-setActiveNav(); // Panggil saat halaman dimuat untuk inisialisasi
+setActiveNav();
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 0) {
+        header.classList.add('h-scroll');
+    } else {
+        header.classList.remove('h-scroll');
+    }
+});
