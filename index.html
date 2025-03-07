@@ -138,7 +138,7 @@
             <div class="container popup">
                 <h2>Hubungi Saya</h2>
                 <p>Ada yang ingin ditanyakan? jangan sungkan untuk menghubugni saya!</p>
-                <form id="leadForm">
+                <form action="https://formsubmit.co/21e2ca49552bbb9b0a28b16742d21b9a" method="POST">
                     <div>
                         <input type="text" id="name" name="nama" required placeholder="Nama" autocomplete="off">
                     </div>
@@ -148,6 +148,14 @@
                     <div>
                         <textarea id="message" name="msg" rows="4" required placeholder="Pesan" autocomplete="off"></textarea>
                     </div>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_cc" value="dianmei1602@email.com">
+                    <input type="hidden" name="_subject" value="New submission on your Landing Page!">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://dianmei1602.github.io/landing-page/thanks.html">
+
+
+
                     <div>
                         <button type="submit">Kirim</button>
                     </div>
@@ -185,7 +193,6 @@
     </script>
     <!-- JAVASCRIPT -->
      <script src="script.js"></script>
-     <script src="server.js"></script>
     
 </body>
 </html>
